@@ -53,4 +53,4 @@ Invoke-RestMethod -Uri "http://localhost:5001/predict" `
   "PRICES": [6841231]
 }
 
-training methods are in train_housing.ipynb
+- training methods are in train_housing.ipynb
