@@ -42,7 +42,7 @@ $body = @'
 }
 '@
 
-Invoke-RestMethod -Uri "http://localhost:5001/predict" `
+Invoke-RestMethod -Uri "http://localhost:5002/predict" `
                   -Method Post `
                   -ContentType "application/json" `
                   -Body $body
