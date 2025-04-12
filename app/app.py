@@ -58,7 +58,7 @@ def predict():
             input_features[col] = 0
     input_features = input_features[expected_columns]  # Ensure correct column order
 
-
+     #### Data Predictions ####
     predictions = model.predict(input_features)
     predictions = scaler_target.inverse_transform(predictions.reshape(-1, 1)) # Inverse transform the predictions prices to get the original scale
 
