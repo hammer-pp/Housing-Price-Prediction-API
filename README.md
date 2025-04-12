@@ -14,10 +14,10 @@ python app.py
 
 Docker Instructions
 1. Build the Docker Image
-docker build -t <image name> .
+docker build -t your image name .
 
  2. Run the Container
-docker run -p 5001:5001 <image name> # you can switch your port.
+docker run -p 5002:5002 your image name # you can switch your port.
 
 API Usage
 Endpoint: /predict
@@ -32,12 +32,12 @@ Content-Type: application/json
   ]
 }
 
-Example: run on terminal with Invoke-RestMethod
+Example:  run on terminal with Invoke-RestMethod
 
 $body = @'
 {
   "features": [
-    [7420, 4, 2, 2, "yes", "yes", "yes", "no", "yes", 3, "yes", "semi-furnished"]
+    [5200, 3, 2, 1, "yes", "no", "yes", "no", "yes", 2, "yes", "semi-furnished"]
   ]
 }
 '@
@@ -50,5 +50,7 @@ Invoke-RestMethod -Uri "http://localhost:5001/predict" `
 
 🔁 Output Example
 {
-  "results": [6841231]
+  "PRICES": [6841231]
 }
+
+training methods are in train_housing.ipynb
