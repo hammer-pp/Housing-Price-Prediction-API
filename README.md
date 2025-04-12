@@ -14,10 +14,10 @@ python app.py
 
 Docker Instructions
 1. Build the Docker Image
-docker build -t your image name .
+docker build -t housing-model .
 
  2. Run the Container
-docker run -p 5002:5002 your image name # you can switch your port.
+docker run -p 5002:5002 housing-model # you can switch your port.
 
 API Usage
 Endpoint: /predict
@@ -50,7 +50,7 @@ Invoke-RestMethod -Uri "http://localhost:5002/predict" `
 
 🔁 Output Example
 {
-  "PRICES": [6841231]
+  "PRICES PREDICTION": [6841231]
 }
 
 - training methods are in train_housing.ipynb
